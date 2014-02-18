@@ -28,13 +28,16 @@ public class ShowMethods {
       Method[] methods = c.getMethods();
       Constructor[] ctors = c.getConstructors();
       if(args.length == 1) {
+    	  print("===args.length == 1 ===================");
         for(Method method : methods)
           print(
             p.matcher(method.toString()).replaceAll(""));
+        print("=======================================");
         for(Constructor ctor : ctors)
           print(p.matcher(ctor.toString()).replaceAll(""));
         lines = methods.length + ctors.length;
       } else {
+    	  print(" =========  else ===================");
         for(Method method : methods)
           if(method.toString().indexOf(args[1]) != -1) {
             print(
