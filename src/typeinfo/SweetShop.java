@@ -10,23 +10,25 @@ class Candy {
 
 class Gum {
   static { print("Loading Gum"); }
+  static void printf() {
+	  print("Gum printf()");
+  }
 }
 
 class Cookie {
   static { print("Loading Cookie"); }
-  static void printf() {
-	  print("Cookie printf()");
-  }
+
 }
 
 public class SweetShop {
-  public static void main(String[] args) {	
+  public static void main(String[] args) throws InstantiationException, IllegalAccessException {	
     print("inside main");
     new Candy();
     print("After creating Candy");
     try {
-      Object a = Class.forName("typeinfo.Gum");
-//      ((Cookie)a).printf();
+      Class a = Class.forName("typeinfo.Gum");
+      Object b = a.newInstance();
+      ((Gum)b).printf();
     } catch(ClassNotFoundException e) {
       print("Couldn't find Gum");
     }
