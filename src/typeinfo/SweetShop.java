@@ -14,6 +14,9 @@ class Gum {
 
 class Cookie {
   static { print("Loading Cookie"); }
+  static void printf() {
+	  print("Cookie printf()");
+  }
 }
 
 public class SweetShop {
@@ -22,7 +25,8 @@ public class SweetShop {
     new Candy();
     print("After creating Candy");
     try {
-      Class.forName("Gum");
+      Object a = Class.forName("typeinfo.Gum");
+//      ((Cookie)a).printf();
     } catch(ClassNotFoundException e) {
       print("Couldn't find Gum");
     }
