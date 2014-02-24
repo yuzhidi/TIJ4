@@ -27,11 +27,16 @@ public class ShowMethods {
       Class<?> c = Class.forName(args[0]);
       Method[] methods = c.getMethods();
       Constructor[] ctors = c.getConstructors();
+
       if(args.length == 1) {
     	  print("===args.length == 1 ===================");
-        for(Method method : methods)
+        for(Method method : methods) {
           print(
             p.matcher(method.toString()).replaceAll(""));
+          // leo add to understand regal
+          print("--toString");
+          print(method.toString());
+        }
         print("=======================================");
         for(Constructor ctor : ctors)
           print(p.matcher(ctor.toString()).replaceAll(""));
