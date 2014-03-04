@@ -10,7 +10,8 @@ public class FormattedMemoryInput {
       DataInputStream in = new DataInputStream(
         new ByteArrayInputStream(
          BufferedInputFile.read(
-          "FormattedMemoryInput.java").getBytes()));
+        		 // as in Eclipse, update the file path by absolute path
+          "/home/wlia/workspaceAdt/TIJ4/src/io/FormattedMemoryInput.java").getBytes()));
       while(true)
         System.out.print((char)in.readByte());
     } catch(EOFException e) {
