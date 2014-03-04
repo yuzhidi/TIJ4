@@ -9,7 +9,7 @@ public class TestEOF {
   throws IOException {
     DataInputStream in = new DataInputStream(
       new BufferedInputStream(
-        new FileInputStream("TestEOF.java")));
+        new FileInputStream("/home/wlia/workspaceAdt/TIJ4/src/io/TestEOF.java")));
     while(in.available() != 0)
       System.out.print((char)in.readByte());
   }
