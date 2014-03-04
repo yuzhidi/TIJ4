@@ -19,6 +19,6 @@ public class BufferedInputFile {
   }
   public static void main(String[] args)
   throws IOException {
-    System.out.print(read("BufferedInputFile.java"));
+    System.out.print(read("/home/wlia/workspaceAdt/TIJ4/src/io/BufferedInputFile.java"));
   }
 } /* (Execute to see output) *///:~
